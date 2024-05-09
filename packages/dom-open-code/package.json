@@ -1,6 +1,6 @@
 {
   "name": "dom-open-code",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "click dom open and navigate to the code",
   "private": false,
   "keywords": [
@@ -37,10 +37,18 @@
       "require": "./dist/webpackLoader.cjs",
       "import": "./dist/webpackLoader.mjs"
     },
+    "./esbuild": {
+      "require": "./dist/esbuild.cjs",
+      "import": "./dist/esbuild.mjs"
+    },
+    "./rollup": {
+      "require": "./dist/rollup.cjs",
+      "import": "./dist/rollup.mjs"
+    },
     "./*": "./*"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.24.5",
     "@babel/plugin-syntax-import-meta": "^7.10.4",
