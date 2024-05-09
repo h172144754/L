@@ -1,0 +1,55 @@
+{
+  "name": "dom-open-code",
+  "version": "1.0.0",
+  "description": "click dom open and navigate to the code",
+  "keywords": [
+    "dom",
+    "code",
+    "vite",
+    "vite-plugin",
+    "vue"
+  ],
+  "scripts": {
+    "unbuild": "unbuild --minify",
+    "undev": "unbuild --stub"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./unplugin": {
+      "require": "./dist/unplugin.cjs",
+      "import": "./dist/unplugin.mjs"
+    },
+    "./vite": {
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.mjs"
+    },
+    "./webpack": {
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.mjs"
+    },
+    "./webpackLoader": {
+      "require": "./dist/webpackLoader.cjs",
+      "import": "./dist/webpackLoader.mjs"
+    },
+    "./*": "./*"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-typescript": "^7.24.5",
+    "@rollup/pluginutils": "^5.1.0",
+    "@vue/babel-plugin-jsx": "^1.2.2",
+    "@vue/compiler-dom": "^3.4.27",
+    "launch-editor": "^2.6.1",
+    "magic-string": "^0.30.10",
+    "unbuild": "^2.0.0",
+    "unplugin": "^1.10.1"
+  }
+}
