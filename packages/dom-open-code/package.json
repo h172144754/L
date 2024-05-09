@@ -1,7 +1,8 @@
 {
   "name": "dom-open-code",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "click dom open and navigate to the code",
+  "private": false,
   "keywords": [
     "dom",
     "code",
