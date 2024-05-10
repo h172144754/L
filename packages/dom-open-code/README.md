@@ -18,33 +18,29 @@ npm i dom-open-code
 首先在项目入口文件（ `main` 文件）中引入插件初始化
 
 ```ts
-import { initDomOpenCode } from 'dom-open-code'
+import { initDomOpenCode } from "dom-open-code";
 
 // 初始化 dom-open-code
 // initDomOpenCode()
 
 // 推荐：只在非生产环境初始化
-process.env.NODE_ENV !== 'production' && initDomOpenCode()
+process.env.NODE_ENV !== "production" && initDomOpenCode();
 ```
 
 #### 第二步
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite'
-import vue3 from '@vitejs/plugin-vue'
-import { domOpenCodePlugin } from 'dom-open-code/vite'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import { domOpenCodePlugin } from "dom-open-code/vite";
 
 export default defineConfig({
   plugins: [
-    vue3(),
-    process.env.NODE_ENV !== 'production'
-      ? domOpenCodePlugin({
-          mode: 'vue',
-        })
-      : undefined,
-  ].filter((f) => !!f)
-})
+    vue(),
+    domOpenCodePlugin({}),
+  ],
+});
 ```
 
 ## 💡 注意
@@ -56,5 +52,3 @@ code -v
 ```
 
 可以看到 vscode 版本信息意味着成功。
-
-
